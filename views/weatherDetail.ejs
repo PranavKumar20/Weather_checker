@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Checker</title>
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <style>
+      body{
+        background-color: #feda6a;
+      }
+      .a-c{
+        text-align: center;
+      }
+      .custom-form {
+        text-align: center;
+      }
+
+      .styled-input {
+        width: 200px;
+        padding: 10px; 
+        border: 2px solid #ccc; 
+        border-radius: 5px;
+        font-size: 16px; 
+      }
+
+      .styled-input::placeholder {
+        color: #999; 
+      }
+
+      button {
+        background-color: #007bff; 
+        color: #fff; 
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+      }
+
+      button:hover {
+        background-color: #0056b3; 
+      }
+      .styled-label {
+        display: block;
+        text-align: center; 
+        margin-bottom: 10px; 
+        font-weight: bold; 
+        font-size: 18px; 
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- <img src="" alt="" srcset=""> -->
+    <div class="main_div">
+      <h1 class="a-c">Check Weather of any city</h1>
+      <form action="/" method="post" class="custom-form">
+        <label for="cityName" class="styled-label">Enter City Name: </label>
+        <input type="text" name="cityName" placeholder="Enter City Name" class="styled-input">
+        <button type="submit"> Go </button>
+    </form>
+      <h1 class="a-c"><%=renderData.name%></h1>
+      <div>
+        <p class="a-c">Temperature: <%= renderData.temp %> degree celcuis</p>
+        <p class="a-c">Wind Speed: <%= renderData.speed %> kmph</p>
+        <p class="a-c">Pressure: <%= renderData.pressure %> bar</p>
+        <p class="a-c">Humidity: <%= renderData.humidity %> g/m^3</p>
+        <p class="a-c">Cloud Description: <%= renderData.descp %></p>
+      </div>
+    </div>
+  </body>
+</html>
